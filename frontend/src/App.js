@@ -34,7 +34,7 @@ const App = () => {
   };
 
   const handleDeleteImage = (id) => {
-    setImages(images.filter((image) => image.id !== id));
+    setImages(images.filter((image) => image.data.id !== id));
   };
 
   // console.log('images ', images);
