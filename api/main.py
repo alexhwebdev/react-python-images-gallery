@@ -28,7 +28,11 @@ def new_image():
   }
   params = {"query": word}
   print("----------> params ", params)
-  response = requests.get(url=UNSPLASH_URL, headers=headers, params=params)
+  response = requests.get(
+    url=UNSPLASH_URL, 
+    headers=headers, 
+    params=params
+  )
 
   # print(response.json())
   # return {"word": word}
