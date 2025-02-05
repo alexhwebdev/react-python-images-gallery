@@ -22,7 +22,6 @@ app.config["DEBUG"] = DEBUG
 @app.route("/new-image")            # Decorator function : route - registers function
 def new_image():
   word = request.args.get("query")  # query : ?query=car
-  # return {"word": word}             # if you return dictionary, 'content-type' will be JSON
   headers = {
     "Accept-Version": "v1",
     "Authorization": "Client-ID " + UNSPLASH_KEY
@@ -34,7 +33,7 @@ def new_image():
   # print(response.json())
   # return {"word": word}
   data = response.json()
-  return {"data": data}
+  return {"data": data}  # if you return dictionary, 'content-type' will be JSON
   # return data
 
 if __name__ == "__main__":
